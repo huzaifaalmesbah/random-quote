@@ -1,0 +1,40 @@
+# Copyright (C) 2024 Huzaifa Al Mesbah
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Random Quote 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/random-quote\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-15T19:07:18+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: random-quote\n"
+
+#. Plugin Name of the plugin
+#: random-quote.php
+msgid "Random Quote"
+msgstr ""
+
+#. Description of the plugin
+#: random-quote.php
+msgid "A simple plugin that displays a daily inspirational quote using a free API."
+msgstr ""
+
+#. Author of the plugin
+#: random-quote.php
+msgid "Huzaifa Al Mesbah"
+msgstr ""
+
+#. Author URI of the plugin
+#: random-quote.php
+msgid "https://profiles.wordpress.org/huzaifaalmesbah"
+msgstr ""
+
+#: includes/class-rq-api.php:24
+#: includes/class-rq-api.php:35
+msgid "Could not retrieve quote. Please try again later."
+msgstr ""

@@ -1,0 +1,55 @@
+<?php
+/**
+ * The core plugin class.
+ *
+ * This is the main class for the Random Quote plugin. It initializes the plugin by loading dependencies
+ * and defining hooks for both the public-facing and admin-specific functionalities.
+ *
+ * @package RandomQuote
+ */
+
+/**
+ * The core plugin class.
+ */
+class Random_Quote {
+
+	/**
+	 * Constructor to initialize the plugin.
+	 */
+	public function __construct() {
+		$this->load_dependencies();
+		$this->define_admin_hooks();
+		$this->define_public_hooks();
+	}
+
+	/**
+	 * Load the required dependencies for the plugin.
+	 */
+	private function load_dependencies() {
+		require_once plugin_dir_path( __FILE__ ) . 'class-rq-api.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-rq-frontend.php';
+	}
+
+	/**
+	 * Register the hooks related to the admin area.
+	 */
+	private function define_admin_hooks() {
+		// Add admin-specific hooks here.
+	}
+
+	/**
+	 * Register the hooks related to the public-facing side.
+	 */
+	private function define_public_hooks() {
+		$plugin_public = new RQ_Frontend();
+		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
+		add_shortcode( 'random_quote', array( $plugin_public, 'display_quote' ) );
+	}
+
+	/**
+	 * Run the plugin.
+	 */
+	public function run() {
+		// Add hooks that need to run regardless of the area (admin/public).
+	}
+}

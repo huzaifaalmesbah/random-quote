@@ -1,0 +1,8 @@
+{
+    "devDependencies": {
+      "dir-archiver": "^2.1.0"
+    },
+    "scripts": {
+          "bundle": "dir-archiver --src . --dest ../random-quote.zip --exclude .DS_Store .git .distignore .gitattributes .github .gitignore .wordpress-org README.md composer.json composer.lock node_modules vendor package-lock.json package.json phpcs.xml.dist"
+      }
+  }

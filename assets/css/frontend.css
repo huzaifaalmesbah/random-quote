@@ -1,0 +1,26 @@
+.rq-quote-wrapper {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.rq-quote {
+    font-style: italic;
+    margin: 0; 
+}
+
+.rq-quote p { 
+    font-weight: 400;
+    margin-bottom: 10px; 
+}
+
+.rq-quote cite {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+}
