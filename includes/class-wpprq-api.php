@@ -8,9 +8,9 @@
  */
 
 /**
- * Class RQ_API
+ * Class WPPRQ_API
  */
-class RQ_API {
+class WPPRQ_API {
 
 	/**
 	 * Fetches a daily inspirational quote from the ZenQuotes API.
@@ -29,7 +29,7 @@ class RQ_API {
 		if ( ! empty( $data ) && is_array( $data ) ) {
 			$quote  = esc_html( $data[0]->q );
 			$author = esc_html( $data[0]->a );
-			return "<blockquote class='rq-quote'><p>{$quote}</p><cite>&mdash; {$author}</cite></blockquote>";
+			return "<blockquote class='wpprq-quote'><p>{$quote}</p><cite>&mdash; {$author}</cite></blockquote>";
 		}
 
 		return __( 'Could not retrieve quote. Please try again later.', 'random-quote' );

@@ -2,7 +2,7 @@
 Contributors: huzaifaalmesbah
 Tags: random quote, quote, shortcode
 Requires at least: 5.6
-Tested up to: 6.5
+Tested up to: 6.6.1
 Requires PHP: 7.0
 Stable tag: 1.0.0
 License: GPL2
@@ -12,11 +12,13 @@ A simple plugin that displays a daily inspirational quote using the ZenQuotes AP
 
 == Description ==
 
-Random Quote is a lightweight plugin that fetches a random daily inspirational quote from the ZenQuotes API and displays it on your website. Simply use the [random_quote] shortcode to embed the quote wherever you want.
+Random Quote is a lightweight plugin that fetches a random daily inspirational quote from the ZenQuotes API and displays it on your website. Simply use the [wpprq_quote] shortcode to embed the quote wherever you want.
 
 Features:
 - Automatically fetches and displays a new quote daily.
 - Uses a simple shortcode for easy embedding.
+
+**Please Note:** This plugin relies on the ZenQuotes API to fetch the daily quotes. By using this plugin, you agree to the [ZenQuotes API Terms and Conditions](https://docs.zenquotes.io/terms-and-conditions/) and [Privacy Policy](https://docs.zenquotes.io/privacy-policy/). Your website will send a request to the ZenQuotes API to retrieve a quote, and the API's servers may log certain data such as IP addresses as part of their normal operations.
 
 == Installation ==
 
@@ -29,6 +31,10 @@ Features:
 = How often does the quote update? =
 
 The plugin fetches a new quote daily from the ZenQuotes API.
+
+= Does the plugin store any user data? =
+
+The plugin itself does not store any user data. However, when fetching a quote from the ZenQuotes API, certain data such as IP addresses may be logged by the API provider.
 
 == Changelog ==
 
@@ -44,7 +50,8 @@ The plugin fetches a new quote daily from the ZenQuotes API.
 
 1. Screenshot of the daily inspirational quote displayed on a website.
 
-API Credits:
+== API Credits ==
+
 The plugin uses the ZenQuotes API (https://zenquotes.io/) to fetch daily inspirational quotes.
 
 == License ==
