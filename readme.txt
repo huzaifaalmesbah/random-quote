@@ -24,7 +24,7 @@ Features:
 
 1. Upload the `random-quote` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Use the shortcode `[random_quote]` in any post, page, or widget to display the daily inspirational quote.
+3. Use the shortcode `[wpprq_quote]` in any post, page, or widget to display the daily inspirational quote.
 
 == Frequently Asked Questions ==
 
