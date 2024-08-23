@@ -1,5 +1,5 @@
 === Random Quote ===
-Contributors: huzaifaalmesbah
+Contributors: wppure, huzaifaalmesbah
 Tags: random quote, quote, shortcode
 Requires at least: 5.6
 Tested up to: 6.6.1
