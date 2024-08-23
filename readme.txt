@@ -4,7 +4,7 @@ Tags: random quote, quote, shortcode
 Requires at least: 5.6
 Tested up to: 6.6.1
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,8 @@ The plugin fetches a new quote daily from the ZenQuotes API.
 The plugin itself does not store any user data. However, when fetching a quote from the ZenQuotes API, certain data such as IP addresses may be logged by the API provider.
 
 == Changelog ==
+= 1.0.1 =
+* Update Description.
 
 = 1.0.0 =
 * Initial release.

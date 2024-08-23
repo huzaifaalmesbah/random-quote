@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Random Quote
- * Description: A simple plugin that displays a daily inspirational quote using a free API.
- * Version: 1.0.0
+* Description: A lightweight plugin that displays a daily quote using the ZenQuotes API. Use the [wpprq_quote] shortcode to add it anywhere on your site.
+ * Version: 1.0.1
  * Requires at least: 5.6
  * Requires PHP: 7.0
  * Author: Huzaifa Al Mesbah
