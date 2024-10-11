@@ -1,12 +1,11 @@
 name: Deploy
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types:
+      - published
 
 jobs:
-
   deploy:
     name: Deploy to WordPress.org
     runs-on: ubuntu-latest
