@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Random Quote
 * Description: A lightweight plugin that displays a daily quote using the ZenQuotes API. Use the [wpprq_quote] shortcode to add it anywhere on your site.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Requires at least: 5.6
  * Requires PHP: 7.0
  * Author: Huzaifa Al Mesbah
@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Plugin constants.
-define( 'WPPRQ_VERSION', '1.0.3' );
+define( 'WPPRQ_VERSION', '1.0.4' );
 define( 'WPPRQ_PLUGIN_FILE', __FILE__ );
 define( 'WPPRQ_PLUGIN_URL', plugin_dir_url( WPPRQ_PLUGIN_FILE ) );
 define( 'WPPRQ_ASSETS_URL', WPPRQ_PLUGIN_URL . 'assets/' );
