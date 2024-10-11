@@ -4,7 +4,7 @@ Tags: random quote, quote, shortcode
 Requires at least: 5.6
 Tested up to: 6.6.2
 Requires PHP: 7.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
