@@ -1,4 +1,5 @@
-name: Plugin asset/readme update
+name: Plugin asset and readme update to WordPress.org
+
 on:
   push:
     branches:
@@ -6,12 +7,13 @@ on:
     paths:
       - .wordpress-org/*
       - readme.txt
+
 jobs:
-  master:
-    name: Push to master
+  update-assets-and-readme:
+    name: Update plugin assets and readme to WordPress.org
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
     - name: WordPress.org plugin asset/readme update
       uses: bluehost/wp-plugin-readme-assets-updater@master
       env:
