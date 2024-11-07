@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Random Quote
- * Description: A simple plugin that displays a daily inspirational quote using a free API.
- * Version: 1.0.0
+* Description: A lightweight plugin that displays a daily quote using the ZenQuotes API. Use the [wpprq_quote] shortcode to add it anywhere on your site.
+ * Version: 1.0.6
  * Requires at least: 5.6
  * Requires PHP: 7.0
  * Author: Huzaifa Al Mesbah
@@ -18,13 +18,35 @@
 defined( 'ABSPATH' ) || exit;
 
 // Plugin constants.
-define( 'WPPRQ_VERSION', '1.0.0' );
+define( 'WPPRQ_VERSION', '1.0.6' );
 define( 'WPPRQ_PLUGIN_FILE', __FILE__ );
 define( 'WPPRQ_PLUGIN_URL', plugin_dir_url( WPPRQ_PLUGIN_FILE ) );
 define( 'WPPRQ_ASSETS_URL', WPPRQ_PLUGIN_URL . 'assets/' );
 
+// Load the Composer autoload file.
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
 // Include the main class.
 require_once plugin_dir_path( WPPRQ_PLUGIN_FILE ) . 'includes/class-wpprq-core.php';
+
+
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function appsero_init_tracker_random_quote() {
+
+    $client = new Appsero\Client( 'ede1e8b4-619f-442f-98b4-3787df3bbb39', 'Random Quote', __FILE__ );
+
+    // Active insights
+    $client->insights()->init();
+
+}
+
+appsero_init_tracker_random_quote();
+
 
 /**
  * Initializes the plugin.

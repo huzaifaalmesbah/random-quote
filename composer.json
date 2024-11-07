@@ -14,5 +14,8 @@
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
 		"make-pot": "wp i18n make-pot . languages/random-quote.pot",
 		"lint:autofix": "vendor/bin/phpcbf"
-	}
+	},
+    "require": {
+        "appsero/client": "^2.0"
+    }
 }
