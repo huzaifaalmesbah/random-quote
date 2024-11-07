@@ -1,4 +1,4 @@
-name: Plugin asset and readme update to WordPress.org
+name: Plugin asset and readme update
 
 on:
   push:
