@@ -7,10 +7,12 @@
  * @package random-quote
  */
 
+namespace WPPRQ\RandomQuote;
+
 /**
- * Class WPPRQ_Rest_API
+ * Class RestApi
  */
-class WPPRQ_Rest_API {
+class RestApi {
 
     /**
      * Register REST API endpoint for fetching quotes
@@ -27,6 +29,6 @@ class WPPRQ_Rest_API {
      * Callback function for the quote endpoint
      */
     public function get_quote() {
-        return rest_ensure_response(WPPRQ_API::fetch_quote());
+        return rest_ensure_response(Api::fetch_quote());
     }
 }

@@ -8,10 +8,12 @@
  * @package random-quote
  */
 
+namespace WPPRQ\RandomQuote;
+
 /**
  * The core plugin class.
  */
-class WPPRQ_Core {
+class Core {
 
 	/**
 	 * Constructor to initialize the plugin.
@@ -28,10 +30,7 @@ class WPPRQ_Core {
 	 * Load the required dependencies for the plugin.
 	 */
 	private function load_dependencies() {
-		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-api.php';
-		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-frontend.php';
-		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-blocks.php';
-		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-rest-api.php';
+		// Dependencies are now handled by Composer autoloader
 	}
 
 	/**
@@ -45,7 +44,7 @@ class WPPRQ_Core {
 	 * Register the hooks related to the public-facing side.
 	 */
 	private function define_public_hooks() {
-		$plugin_public = new WPPRQ_Frontend();
+		$plugin_public = new Frontend();
 		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
 		add_shortcode( 'wpprq_quote', array( $plugin_public, 'display_quote' ) );
 	}
@@ -54,7 +53,7 @@ class WPPRQ_Core {
 	 * Initialize the blocks functionality.
 	 */
 	private function init_blocks() {
-		$blocks = new WPPRQ_Blocks();
+		$blocks = new Blocks();
 		$blocks->init();
 	}
 
@@ -62,7 +61,7 @@ class WPPRQ_Core {
 	 * Initialize the REST API functionality.
 	 */
 	private function init_rest_api() {
-		$rest_api = new WPPRQ_Rest_API();
+		$rest_api = new RestApi();
 		add_action('rest_api_init', array($rest_api, 'register_rest_route'));
 	}
 

@@ -8,10 +8,12 @@
  * @package random-quote
  */
 
+namespace WPPRQ\RandomQuote;
+
 /**
- * Class WPPRQ_Frontend
+ * Class Frontend
  */
-class WPPRQ_Frontend {
+class Frontend {
 
 	/**
 	 * Enqueue stylesheets for the public-facing side.
@@ -31,7 +33,7 @@ class WPPRQ_Frontend {
 	 * @return string The HTML markup for the quote wrapper.
 	 */
 	public function display_quote() {
-		$quote = WPPRQ_API::fetch_quote();
+		$quote = Api::fetch_quote();
 		return "<div class='wpprq-quote-wrapper'>{$quote}</div>";
 	}
 }

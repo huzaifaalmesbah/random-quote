@@ -27,9 +27,6 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
-// Include the required files.
-require_once plugin_dir_path( WPPRQ_PLUGIN_FILE ) . 'includes/class-wpprq-core.php';
-
 /**
  * Initialize the plugin tracker
  *
@@ -49,7 +46,7 @@ appsero_init_tracker_random_quote();
  */
 function wpprq_run_plugin() {
     // Initialize core functionality
-    $plugin = new WPPRQ_Core();
+    $plugin = new WPPRQ\RandomQuote\Core();
     $plugin->run();
 }
 

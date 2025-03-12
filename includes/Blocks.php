@@ -7,10 +7,12 @@
  * @package random-quote
  */
 
+namespace WPPRQ\RandomQuote;
+
 /**
- * Class WPPRQ_Blocks
+ * Class Blocks
  */
-class WPPRQ_Blocks {
+class Blocks {
 
     /**
      * Register the block using the metadata loaded from the `block.json` file.
@@ -24,7 +26,26 @@ class WPPRQ_Blocks {
     /**
      * Initialize the blocks functionality.
      */
+    /**
+     * Register custom block category.
+     *
+     * @param array $categories Array of block categories.
+     * @return array Modified array of block categories.
+     */
+    public function register_block_category($categories) {
+        return array_merge(
+            [
+                [
+                    'slug'  => 'random-quote',
+                    'title' => __('Random Quote', 'random-quote')
+                ]
+            ],
+            $categories
+        );
+    }
+
     public function init() {
         add_action( 'init', array( $this, 'register_block' ) );
+        add_filter( 'block_categories_all', array( $this, 'register_block_category' ), 10, 1 );
     }
 }

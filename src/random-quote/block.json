@@ -4,8 +4,8 @@
 	"name": "create-block/random-quote",
 	"version": "0.1.0",
 	"title": "Random Quote",
-	"category": "widgets",
-	"icon": "smiley",
+	"category": "random-quote",
+	"icon": "format-quote",
 	"description": "Display a random inspirational quote from ZenQuotes API on your website.",
 	"example": {},
 	"supports": {

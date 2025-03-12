@@ -7,10 +7,12 @@
  * @package random-quote
  */
 
+namespace WPPRQ\RandomQuote;
+
 /**
- * Class WPPRQ_API
+ * Class Api
  */
-class WPPRQ_API {
+class Api {
 
 	/**
 	 * Transient key for storing the daily quote.
