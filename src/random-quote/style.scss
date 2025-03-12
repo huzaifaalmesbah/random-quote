@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+.wp-block-create-block-random-quote {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    blockquote.wpprq-quote {
+        font-style: italic;
+        margin: 0;
+
+        p { 
+            font-weight: 400;
+            margin-bottom: 10px; 
+        }
+
+        cite {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            text-align: right;
+        }
+    }
+}

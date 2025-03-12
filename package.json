@@ -1,8 +1,28 @@
 {
-    "devDependencies": {
-      "dir-archiver": "^2.1.0"
-    },
-    "scripts": {
-          "bundle": "dir-archiver --src . --dest ../random-quote.zip --exclude .DS_Store .git .distignore .gitattributes .github .gitignore .wordpress-org README.md composer.json composer.lock node_modules vendor package-lock.json package.json phpcs.xml.dist"
-      }
+  "name": "random-quote",
+  "version": "1.0.6",
+  "description": "A WordPress block plugin for displaying random quotes from ZenQuotes API",
+  "author": "Huzaifa Al Mesbah",
+  "license": "GPL-2.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build --webpack-copy-php",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start --webpack-copy-php",
+    "bundle": "dir-archiver --src . --dest ../random-quote.zip --exclude .DS_Store .git .distignore .gitattributes .github .gitignore .wordpress-org README.md composer.json composer.lock node_modules vendor package-lock.json package.json phpcs.xml.dist"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.12.0",
+    "dir-archiver": "^2.1.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^12.19.0",
+    "@wordpress/components": "^25.14.0",
+    "@wordpress/data": "^9.20.0",
+    "@wordpress/i18n": "^4.48.0"
   }
+}

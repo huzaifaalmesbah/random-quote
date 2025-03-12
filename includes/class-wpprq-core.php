@@ -20,6 +20,8 @@ class WPPRQ_Core {
 		$this->load_dependencies();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->init_blocks();
+		$this->init_rest_api();
 	}
 
 	/**
@@ -28,6 +30,8 @@ class WPPRQ_Core {
 	private function load_dependencies() {
 		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-api.php';
 		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-frontend.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-blocks.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-wpprq-rest-api.php';
 	}
 
 	/**
@@ -44,6 +48,22 @@ class WPPRQ_Core {
 		$plugin_public = new WPPRQ_Frontend();
 		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
 		add_shortcode( 'wpprq_quote', array( $plugin_public, 'display_quote' ) );
+	}
+
+	/**
+	 * Initialize the blocks functionality.
+	 */
+	private function init_blocks() {
+		$blocks = new WPPRQ_Blocks();
+		$blocks->init();
+	}
+
+	/**
+	 * Initialize the REST API functionality.
+	 */
+	private function init_rest_api() {
+		$rest_api = new WPPRQ_Rest_API();
+		add_action('rest_api_init', array($rest_api, 'register_rest_route'));
 	}
 
 	/**

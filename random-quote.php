@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Random Quote
-* Description: A lightweight plugin that displays a daily quote using the ZenQuotes API. Use the [wpprq_quote] shortcode to add it anywhere on your site.
+ * Description: A lightweight plugin that displays a daily quote using the ZenQuotes API. Add quotes using the Gutenberg block editor or [wpprq_quote] shortcode anywhere on your site.
  * Version: 1.0.6
  * Requires at least: 5.6
  * Requires PHP: 7.0
@@ -9,7 +9,6 @@
  * Author URI: https://profiles.wordpress.org/huzaifaalmesbah
  * License: GPL2
  * Text Domain: random-quote
- * Domain Path: /languages
  *
  * @package random-quote
  */
@@ -27,9 +26,9 @@ define( 'WPPRQ_ASSETS_URL', WPPRQ_PLUGIN_URL . 'assets/' );
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
-// Include the main class.
-require_once plugin_dir_path( WPPRQ_PLUGIN_FILE ) . 'includes/class-wpprq-core.php';
 
+// Include the required files.
+require_once plugin_dir_path( WPPRQ_PLUGIN_FILE ) . 'includes/class-wpprq-core.php';
 
 /**
  * Initialize the plugin tracker
@@ -37,25 +36,21 @@ require_once plugin_dir_path( WPPRQ_PLUGIN_FILE ) . 'includes/class-wpprq-core.p
  * @return void
  */
 function appsero_init_tracker_random_quote() {
-
     $client = new Appsero\Client( 'ede1e8b4-619f-442f-98b4-3787df3bbb39', 'Random Quote', __FILE__ );
-
     // Active insights
     $client->insights()->init();
-
 }
-
 appsero_init_tracker_random_quote();
-
 
 /**
  * Initializes the plugin.
  *
- * This function creates a new instance of the WPPRQ_Core class and calls its run method.
+ * This function creates instances of the core classes and initializes their functionality.
  */
 function wpprq_run_plugin() {
-	$plugin = new WPPRQ_Core();
-	$plugin->run();
+    // Initialize core functionality
+    $plugin = new WPPRQ_Core();
+    $plugin->run();
 }
 
 add_action( 'plugins_loaded', 'wpprq_run_plugin' );
