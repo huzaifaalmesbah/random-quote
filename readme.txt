@@ -69,7 +69,6 @@ Enhance your WordPress site with our other powerful plugins:
 - **[Contributors Gallery](https://wordpress.org/plugins/contributors-gallery/)** - Showcase your WordPress contributors in a beautiful and customizable gallery layout.
 - **[Product Spotlight Badge](https://wordpress.org/plugins/product-spotlight-badge/)** - Highlight your WooCommerce products with eye-catching badges to boost sales.
 
-Visit [our plugin collection](https://profiles.wordpress.org/huzaifaalmesbah/#content-plugins) to explore more.
 
 **Please Note:** This plugin relies on the ZenQuotes API to fetch the daily quotes. By using this plugin, you agree to the [ZenQuotes API Terms and Conditions](https://docs.zenquotes.io/terms-and-conditions/) and [Privacy Policy](https://docs.zenquotes.io/privacy-policy/). Your website will send a request to the ZenQuotes API to retrieve a quote, and the API's servers may log certain data such as IP addresses as part of their normal operations.
 
