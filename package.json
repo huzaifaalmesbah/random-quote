@@ -1,6 +1,6 @@
 {
   "name": "random-quote",
-  "version": "1.1.0-beta1",
+  "version": "1.1.0",
   "description": "A WordPress block plugin for displaying random quotes from ZenQuotes API",
   "author": "Huzaifa Al Mesbah",
   "license": "GPL-2.0-or-later",
