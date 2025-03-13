@@ -1,6 +1,6 @@
 === Random Quote - Daily Inspirational Quotes for WordPress ===
 Contributors: wppure, huzaifaalmesbah
-Tags: random quote, daily quotes, inspirational quotes, motivational quotes, quote widget, quote block, gutenberg quotes, zen quotes
+Tags: random quote, quote, shortcode
 Requires at least: 5.6
 Tested up to: 6.7
 Requires PHP: 7.0
@@ -20,15 +20,11 @@ Random Quote is a powerful yet lightweight WordPress plugin that brings daily in
 * **Multiple Integration Options**:
     * Modern Gutenberg Block for visual integration
     * Classic [wpprq_quote] shortcode support
-    * Widget-ready for sidebars and footers
+
 * **Performance Optimized**:
     * Smart 24-hour quote caching
     * Minimal API requests
     * Lightweight and fast loading
-* **Developer Friendly**:
-    * Clean, PSR-4 compliant code
-    * Extensible architecture
-    * Comprehensive documentation
 
 == Installation ==
 
@@ -63,7 +59,7 @@ Random Quote is a powerful yet lightweight WordPress plugin that brings daily in
 3. Save your changes
 4. The quote will be displayed on your page
 
-= Check out our other Plugins =
+== Check out our other Plugins ==
 
 Enhance your WordPress site with our other powerful plugins:
 
