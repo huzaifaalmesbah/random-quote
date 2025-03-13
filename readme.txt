@@ -4,7 +4,7 @@ Tags: random quote, quote, shortcode
 Requires at least: 5.6
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 1.0.6
+Stable tag: 1.1.0-beta1
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ The plugin fetches a new quote daily from the ZenQuotes API.
 The plugin itself does not store any user data. However, when fetching a quote from the ZenQuotes API, certain data such as IP addresses may be logged by the API provider.
 
 == Changelog ==
+= 1.1.0 =
+* Added Gutenberg block support for easier quote integration
+* Improved code organization with PSR-4 autoloading
+* Optimized API calls with 24-hour quote caching
+* Enhanced performance by minimizing API requests
+
 = 1.0.2 =
 * Added integration with AppSero for tracking plugin usage and updates.
 
