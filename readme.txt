@@ -100,6 +100,15 @@ The plugin itself does not store any user data. However, when fetching a quote f
 Yes, the plugin is GDPR compliant. It only processes the minimum data necessary for functionality and clearly discloses any data collection through Appsero SDK (which is opt-in only).
 
 == Changelog ==
+= 1.1.1 =
+* Enhanced error handling with specific error messages (connection, HTTP, JSON, data errors)
+* Added fallback mechanism to display last successful quote during API failures
+* Implemented admin notifications for API connection and service errors
+* Added debug logging for API requests when WP_DEBUG is enabled
+* Improved transient handling and caching strategies
+* Enhanced timeout and redirection settings for API requests
+* Fixed "Could not retrieve quote" persistence issues
+
 = 1.1.0 =
 * Added Gutenberg block support for easier quote integration
 * Improved code organization with PSR-4 autoloading
